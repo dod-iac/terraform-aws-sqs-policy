@@ -107,6 +107,36 @@ data "aws_iam_policy_document" "main" {
   }
 
   #
+  # AllowSNSMessages
+  #
+
+  dynamic "statement" {
+    for_each = length(var.sns_topics_send) > 0 ? [1] : []
+    content {
+      sid = "AllowSNSMessages"
+      actions = [
+        "sqs:SendMessage"
+      ]
+      effect    = "Allow"
+      resources = [var.queue_arn]
+      principals {
+        type        = "Service"
+        identifiers = ["sns.amazonaws.com"]
+      }
+      condition {
+        test     = "StringEquals"
+        variable = "aws:SourceAccount"
+        values   = [data.aws_caller_identity.current.account_id]
+      }
+      condition {
+        test     = "ArnLike"
+        variable = "aws:SourceArn"
+        values   = var.sns_topics_send
+      }
+    }
+  }
+
+  #
   # GetQueueAttributes
   #
 

@@ -15,6 +15,12 @@ variable "s3_buckets_send" {
   default     = []
 }
 
+variable "sns_topics_send" {
+  type        = list(string)
+  description = "The ARNs of the AWS SNS topics that can send SNS messages into the queue. Use [\"*\"] to allow all SNS topics in the current account."
+  default     = []
+}
+
 variable "receivers" {
   type        = list(string)
   description = "List of AWS principals that can receive messages from the SQS queue."

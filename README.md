@@ -70,6 +70,7 @@ No modules.
 | <a name="input_receivers"></a> [receivers](#input\_receivers) | List of AWS principals that can receive messages from the SQS queue. | `list(string)` | `[]` | no |
 | <a name="input_s3_buckets_send"></a> [s3\_buckets\_send](#input\_s3\_buckets\_send) | The ARNs of the AWS S3 buckets that can send S3 event notifications into the queue. Use ["*"] to allow all buckets in the current account. | `list(string)` | `[]` | no |
 | <a name="input_senders"></a> [senders](#input\_senders) | List of AWS principals that can send messages into the SQS queue. | `list(string)` | `[]` | no |
+| <a name="input_sns_topics_send"></a> [sns\_topics\_send](#input\_sns\_topics\_send) | The ARNs of the AWS SNS topics that can send SNS messages into the queue. Use ["*"] to allow all SNS topics in the current account. | `list(string)` | `[]` | no |
 
 ## Outputs
 
