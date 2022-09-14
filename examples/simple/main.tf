@@ -24,7 +24,7 @@ data "aws_partition" "current" {}
 
 module "s3_bucket_source" {
   source  = "dod-iac/s3-bucket/aws"
-  version = "1.0.1"
+  version = "1.2.0"
 
   name = format("test-src-%s", var.test_name)
   notifications = [{
@@ -118,7 +118,7 @@ module "sqs_policy_document" {
 
 module "sqs_queue" {
   source  = "dod-iac/sqs-queue/aws"
-  version = "1.0.2"
+  version = "1.0.4"
 
   name   = format("test-queue-%s", var.test_name)
   policy = module.sqs_policy_document.json

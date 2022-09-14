@@ -25,9 +25,9 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_s3_bucket_source"></a> [s3\_bucket\_source](#module\_s3\_bucket\_source) | dod-iac/s3-bucket/aws | 1.0.1 |
+| <a name="module_s3_bucket_source"></a> [s3\_bucket\_source](#module\_s3\_bucket\_source) | dod-iac/s3-bucket/aws | 1.2.0 |
 | <a name="module_sqs_policy_document"></a> [sqs\_policy\_document](#module\_sqs\_policy\_document) | ../../ | n/a |
-| <a name="module_sqs_queue"></a> [sqs\_queue](#module\_sqs\_queue) | dod-iac/sqs-queue/aws | 1.0.2 |
+| <a name="module_sqs_queue"></a> [sqs\_queue](#module\_sqs\_queue) | dod-iac/sqs-queue/aws | 1.0.4 |
 
 ## Resources
 
